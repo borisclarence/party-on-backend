@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "price_lists",
+  "info": {
+    "singularName": "price-list",
+    "pluralName": "price-lists",
+    "displayName": "priceList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "price_oneproduct": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "biginteger"
+    },
+    "option_price": {
+      "type": "enumeration",
+      "enum": [
+        "Première minute",
+        "Promotion",
+        "Dernière minute"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "status_tarif": {
+      "type": "boolean"
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,46 @@
     },
     "slug": {
       "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "localization": {
+      "type": "json"
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "date_end": {
+      "type": "date"
+    },
+    "hour": {
+      "type": "time"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "phone_infoline": {
+      "type": "string"
+    },
+    "email_infoline": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event-type.event-type"
+    },
+    "status_event": {
+      "type": "boolean"
     }
   }
 }

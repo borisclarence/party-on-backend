@@ -34,17 +34,21 @@
         "images"
       ]
     },
-    "slug": {
-      "type": "string",
-      "required": false
-    },
     "email": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "password": {
       "type": "string",
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "email"
+    },
+    "status_customer": {
+      "type": "boolean"
     }
   }
 }

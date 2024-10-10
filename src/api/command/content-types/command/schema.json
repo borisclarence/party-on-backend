@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commands",
+  "info": {
+    "singularName": "command",
+    "pluralName": "commands",
+    "displayName": "Command"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "price_list": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::price-list.price-list"
+    },
+    "payment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment.payment"
+    },
+    "num_command": {
+      "type": "text"
+    },
+    "date_command": {
+      "type": "datetime"
+    },
+    "status_command": {
+      "type": "boolean"
+    }
+  }
+}
